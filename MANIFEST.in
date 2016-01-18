@@ -1,0 +1,3 @@
+include *.rst
+recursive-include lizard_apps/static *
+recursive-include lizard_apps/templates *
