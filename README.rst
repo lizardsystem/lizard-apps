@@ -6,8 +6,8 @@ Lizard-apps is a simple, Google-apps like Django app for switching between web a
 .. figure:: lizard-apps.png
    :align: center
 
-Quick start
------------
+Installation
+------------
 
 1. Add "lizard_apps" to your INSTALLED_APPS setting like this::
 
@@ -31,9 +31,7 @@ Quick start
 Usage
 -----
 
-A client at www.foo.com can use lizard-apps deployed at apps.lizard.net as follows:
-
-.. raw:: html
+A client at www.foo.com can use lizard-apps deployed at apps.lizard.net as follows::
 
     <!DOCTYPE html>
     <html lang="en">
