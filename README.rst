@@ -33,6 +33,8 @@ Usage
 
 A client at www.foo.com can use lizard-apps deployed at apps.lizard.net as follows:
 
+.. raw:: html
+
     <!DOCTYPE html>
     <html lang="en">
       <head>
@@ -47,3 +49,9 @@ A client at www.foo.com can use lizard-apps deployed at apps.lizard.net as follo
     </html>
 
 The script tag loads a little plain-old javascript that inserts a switch button in the #lizard-apps-container; a default styling is provided via style.css but may be overriden.
+
+TODO
+----
+
+- Better styling.
+- Solve authentication issues.
