@@ -13,9 +13,9 @@ e.innerHTML = `
 
 <svg viewBox="0, 0, 30, 30" style="background-color: black;">
   <rect x="8" y="0" width="3" height="100%" style="fill: white;"/>
-  <rect x="19" y="0" width="3" height="100%" style="fill:white;"/>
-  <rect x="0" y="8" width="100%" height="3" style="fill:white;"/>
-  <rect x="0" y="19" width="100%" height="3" style="fill:white;"/>
+  <rect x="19" y="0" width="3" height="100%" style="fill: white;"/>
+  <rect x="0" y="8" width="100%" height="3" style="fill: white;"/>
+  <rect x="0" y="19" width="100%" height="3" style="fill: white;"/>
 </svg>
 
 <div id="lizard-apps" class="lizard-apps-off">
