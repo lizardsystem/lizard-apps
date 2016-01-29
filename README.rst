@@ -42,11 +42,30 @@ A client at www.foo.com can use lizard-apps deployed at apps.lizard.net as follo
         <script src="http://apps.lizard.net/lizard_apps/screens/foo/" async></script>
       </head>
       <body>
-        <div id="lizard-apps-container" style="margin: 50px auto;"></div>
+      <div id="lizard-apps-button"></div>
+      <div id="lizard-apps-container" style="margin: 50px auto;"></div>
       </body>
     </html>
 
-The script tag loads a little plain-old javascript that inserts a switch button in the #lizard-apps-container; a default styling is provided via style.css but may be overriden.
+The script tag loads a little plain-old javascript that inserts a switch button
+in the #lizard-apps-button. And a container for the apps in the #lizard-apps-container.
+A default styling is provided via style.css but may be overriden.
+
+To launch the plugin add this the body::
+
+  <script>
+    // vanilla js
+    document.addEventListener("DOMContentLoaded", function(event) {
+      Lizard.startPlugins();
+    });
+
+    // or jQuery style
+    $(document).ready(Lizard.startPlugins);
+  </script>
+
+Or initialize it yourself wherever you want::
+
+  Lizard.startPlugins();
 
 TODO
 ----
