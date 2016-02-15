@@ -39,11 +39,11 @@ A client at www.foo.com can use lizard-apps deployed at apps.lizard.net as follo
         <meta charset="utf-8">
         <title>title</title>
         <link rel="stylesheet" type="text/css" href="http://apps.lizard.net/static/lizard_apps/style.css">
-        <script src="http://apps.lizard.net/lizard_apps/screens/foo/" async></script>
       </head>
       <body>
-      <div id="lizard-apps-button"></div>
-      <div id="lizard-apps-container" style="margin: 50px auto;"></div>
+        <div id="lizard-apps-button"></div>
+        <div id="lizard-apps-container" style="margin: 50px auto;"></div>
+        <script src="http://apps.lizard.net/lizard_apps/screens/foo/"></script>
       </body>
     </html>
 
@@ -66,6 +66,15 @@ To launch the plugin add this the body::
 Or initialize it yourself wherever you want::
 
   Lizard.startPlugins();
+
+
+The Apps container will automatically be hidden if you use a CSS framework like Twitter Bootstrap.
+It uses the class `hidden`. If you're not using a CSS framework. You can add this to your CSS::
+
+    .hidden {
+        display: none;
+    }
+
 
 TODO
 ----
