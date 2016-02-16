@@ -26,6 +26,7 @@
       <span class="lizard-apps-title">` + title + `</span>
     `
     var appsContainer = document.getElementById('lizard-apps-container');
+    appsContainer.classList.add('hidden');
     appsContainer.innerHTML = `
     <div class="lizard-apps">
       {% for app in view.screen.applications.all %}
