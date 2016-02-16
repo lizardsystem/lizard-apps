@@ -1,24 +1,120 @@
+/**
+ *  Lizard apps css.
+ */
+#lizard-apps-button {
+  box-sizing: border-box;
+  font-family: Roboto, sans;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 0;
+  background-color: #16a085;
+  color: #ffffff;
+}
+
+/* give some shadow on hover */
+#lizard-apps-button:hover {
+  transition: all 200ms cubic-bezier(0.52, 0, 0.48, 1);
+  -ms-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+#lizard-apps-button ul.dropdown-menu {
+  border-radius: 0;
+}
+
+/* in our case the button should be shown with a white fill */
+#lizard-apps-button svg {
+  margin-right: 0.25em;
+  margin-top: 0.1em;
+  width: 11px;
+  fill: white;
+}
+
 #lizard-apps-container {
-  height: 30px;
-  position: relative;
-  width: 30px;
-}
-.lizard-apps-on {
-  background-color: #fff;
-  border: 1px solid #000;
-  box-shadow: 10px 10px 5px #888;
-  color: #000;
-  height: 200px;
-  left: -145px;
+  box-sizing: border-box;
+  font-family: Roboto, sans;
+  transition: all 200ms cubic-bezier(0.52, 0, 0.48, 1);
+  -ms-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   position: absolute;
-  bottom: -210px;
-  width: 320px;
+  top: 62px;
+  max-width: 300px;
+  color: black;
+  background: white;
 }
-.lizard-apps-off {
-  display: none;
+
+
+/**
+ * All of this defines the nice comic book like arrow on the div
+ */
+.lizard-apps {
+  width: 100%;
+  position: relative;
+  background: white;
+  border: 0px solid white;
 }
-.lizard-apps-icon {
+
+.lizard-apps:after, .lizard-apps:before {
+  bottom: 100%;
+  left: 40px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.lizard-apps:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: white;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+.lizard-apps:before {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: white;
+  border-width: 12px;
+  margin-left: -12px;
+}
+/* end arrow definition */
+
+
+/**
+ * The icons should float left and next to each other
+ * up to 3 icons a row
+ */
+.lizard-apps .lizard-apps-icon {
+  max-width: 100px;
+  max-height: 120px;
   float: left;
-  margin: 10px;
+}
+
+.lizard-apps .lizard-apps-icon > a {
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
+  height: 100px;
   text-align: center;
+}
+
+.lizard-apps .lizard-apps-icon > a:hover {
+  transition: all 200ms cubic-bezier(0.52, 0, 0.48, 1);
+  -ms-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.lizard-apps .lizard-apps-icon > a img {
+  border: solid transparent;
+  border-radius: 10px;
+  max-width: 100%;
+  max-height: 80%;
 }

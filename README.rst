@@ -39,14 +39,62 @@ A client at www.foo.com can use lizard-apps deployed at apps.lizard.net as follo
         <meta charset="utf-8">
         <title>title</title>
         <link rel="stylesheet" type="text/css" href="http://apps.lizard.net/static/lizard_apps/style.css">
-        <script src="http://apps.lizard.net/lizard_apps/screens/foo/" async></script>
+        <style>
+        /**
+         * This is just an example of how to override some items with css.
+         * In your own app, add your own styles to your CSS files.
+         */
+          .hidden {
+            display: none;
+          }
+
+          nav {
+            width: 100%;
+            background: #444;
+          }
+
+          #lizard-apps-button {
+            background-color: #444;
+          }
+        </style>
       </head>
       <body>
-        <div id="lizard-apps-container" style="margin: 50px auto;"></div>
+        <nav> <!-- example navigation Element -->
+          <div id="lizard-apps-button" title="My App Title"></div>
+        </nav>
+        <div id="lizard-apps-container"></div>
+        <script src="http://apps.lizard.net/lizard_apps/screens/foo.js"></script>
       </body>
     </html>
 
-The script tag loads a little plain-old javascript that inserts a switch button in the #lizard-apps-container; a default styling is provided via style.css but may be overriden.
+The script tag loads a little plain-old javascript that inserts a switch button
+in the #lizard-apps-button. And a container for the apps in the #lizard-apps-container.
+A default styling is provided via style.css but may be overriden.
+
+To launch the plugin add this the body::
+
+  <script>
+    // vanilla js
+    document.addEventListener("DOMContentLoaded", function(event) {
+      Lizard.startPlugins();
+    });
+
+    // or jQuery style
+    $(document).ready(Lizard.startPlugins);
+  </script>
+
+Or initialize it yourself wherever you want::
+
+  Lizard.startPlugins();
+
+
+The Apps container will automatically be hidden if you use a CSS framework like Twitter Bootstrap.
+It uses the class `hidden`. If you're not using a CSS framework. You can add this to your CSS::
+
+    .hidden {
+        display: none;
+    }
+
 
 TODO
 ----
