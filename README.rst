@@ -94,10 +94,3 @@ It uses the class `hidden`. If you're not using a CSS framework. You can add thi
     .hidden {
         display: none;
     }
-
-
-TODO
-----
-
-- Better styling.
-- Solve authentication issues.
