@@ -1,42 +1,40 @@
 /**
  *  Lizard apps css.
  */
-.lizard-apps-button {
+#lizard-apps-button {
+  font-family: Roboto, sans;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
   padding: 15px 10px;
-  float: right;
   border: none;
   border-radius: 0;
   background-color: #16a085;
   color: #ffffff;
-  width: 50px;
-  height: 50px;
 }
 
 /* give some shadow on hover */
-.lizard-apps-button:hover {
+#lizard-apps-button:hover {
   transition: all 200ms cubic-bezier(0.52, 0, 0.48, 1);
   -ms-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.lizard-apps-button ul.dropdown-menu {
+#lizard-apps-button ul.dropdown-menu {
   border-radius: 0;
 }
 
 /* in our case the button should be shown with a white fill */
-.lizard-apps-button svg {
+#lizard-apps-button svg {
   margin-right: 0.25em;
   margin-top: 0.1em;
   width: 11px;
   fill: white;
 }
 
-.lizard-apps-container {
+#lizard-apps-container {
   transition: all 200ms cubic-bezier(0.52, 0, 0.48, 1);
   -ms-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);

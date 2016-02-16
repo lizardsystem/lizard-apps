@@ -39,11 +39,31 @@ A client at www.foo.com can use lizard-apps deployed at apps.lizard.net as follo
         <meta charset="utf-8">
         <title>title</title>
         <link rel="stylesheet" type="text/css" href="http://apps.lizard.net/static/lizard_apps/style.css">
+        <style>
+        /**
+         * This is just an example of how to override some items with css.
+         * In your own app, add your own styles to your CSS files.
+         */
+          .hidden {
+            display: none;
+          }
+
+          nav {
+            width: 100%;
+            background: #444;
+          }
+
+          #lizard-apps-button {
+            background-color: #444;
+          }
+        </style>
       </head>
       <body>
-        <div id="lizard-apps-button"></div>
-        <div id="lizard-apps-container" style="margin: 50px auto;"></div>
-        <script src="http://apps.lizard.net/lizard_apps/screens/foo/"></script>
+        <nav> <!-- example navigation Element -->
+          <div id="lizard-apps-button" title="My App Title"></div>
+        </nav>
+        <div id="lizard-apps-container"></div>
+        <script src="http://apps.lizard.net/lizard_apps/screens/foo.js"></script>
       </body>
     </html>
 
