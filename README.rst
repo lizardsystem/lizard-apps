@@ -38,7 +38,7 @@ A client at www.foo.com can use lizard-apps deployed at apps.lizard.net as follo
       <head>
         <meta charset="utf-8">
         <title>title</title>
-        <link rel="stylesheet" type="text/css" href="http://apps.lizard.net/static/lizard_apps/style.css">
+        <link rel="stylesheet" type="text/css" href="https://apps.lizard.net/static/lizard_apps/style.css">
         <style>
         /**
          * This is just an example of how to override some items with css.
@@ -63,7 +63,7 @@ A client at www.foo.com can use lizard-apps deployed at apps.lizard.net as follo
           <div id="lizard-apps-button" title="My App Title"></div>
         </nav>
         <div id="lizard-apps-container"></div>
-        <script src="http://apps.lizard.net/lizard_apps/screens/foo.js"></script>
+        <script src="https://apps.lizard.net/screens/foo.js"></script>
       </body>
     </html>
 
