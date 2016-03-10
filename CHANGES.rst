@@ -6,6 +6,10 @@ v0.2 (unreleased)
 
 - Match instructions on usage with reality.
 
+- Return 404 instead of incorrect JS file when screen does not exist.
+
+- Only allow alphanumeric-dash-underscore in screens slug URL.
+
 
 v0.1.2 (2016-02-16)
 -------------------
