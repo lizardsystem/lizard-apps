@@ -4,6 +4,8 @@ Changelog of lizard-apps
 v0.2 (unreleased)
 -----------------
 
+- Fix style.css to be less `lizard`-y
+
 - Match instructions on usage with reality.
 
 - Return 404 instead of incorrect JS file when screen does not exist.
