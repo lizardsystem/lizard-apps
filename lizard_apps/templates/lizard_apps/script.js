@@ -27,18 +27,18 @@
     `
     var appsContainer = document.getElementById('lizard-apps-container');
     appsContainer.classList.add('hidden');
-    appsContainer.innerHTML = `
-    <div class="lizard-apps">
+    appsContainer.innerHTML = '' +
+
+    '<div class="lizard-apps">' +
       {% for app in view.screen.applications.all %}
-        <div class="lizard-apps-icon">
-          <a href="{{ app.url }}" target="_blank" title="{{ app.name }}">
-            <img src="//{{ request.get_host }}{{ MEDIA_URL }}{{ app.icon }}" />
-            <span class="lizard-app-title">{{ app.name }}</span>
-          </a>
-        </div>
+        '<div class="lizard-apps-icon">' +
+          '<a href="{{ app.url }}" target="_blank" title="{{ app.name }}">' +
+            '<img src="//{{ request.get_host }}{{ MEDIA_URL }}{{ app.icon }}" />' +
+            '<span class="lizard-app-title">{{ app.name }}</span>' +
+          '</a>' +
+        '</div>' +
       {% endfor %}
-    </div>
-    `;
+    '</div>';
 
     appsButton.onclick = function() {
       var e = document.getElementById('lizard-apps-container');
