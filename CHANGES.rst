@@ -1,7 +1,20 @@
 Changelog of lizard-apps
 ========================
 
-v0.2 (unreleased)
+v0.2.2 (unreleased)
+-------------------
+
+- Get rid of template literals (backticks), because this ECMAScript 6 feature
+  is not widely supported yet.
+
+
+v0.2.1 (2016-03-10)
+-------------------
+
+- Update version in setup.py.
+
+
+v0.2 (2016-03-10)
 -----------------
 
 - Fix style.css to be less `lizard`-y
