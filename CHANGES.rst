@@ -1,8 +1,8 @@
 Changelog of lizard-apps
 ========================
 
-v0.2.2 (unreleased)
--------------------
+0.2.3 (2020-01-23)
+------------------
 
 - Get rid of template literals (backticks), because this ECMAScript 6 feature
   is not widely supported yet.
