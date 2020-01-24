@@ -1,7 +1,7 @@
 Changelog of lizard-apps
 ========================
 
-0.2.4 (unreleased)
+0.2.4 (2020-01-24)
 ------------------
 
 - Added support for dumping and loading of fixtures by natural key(s).
