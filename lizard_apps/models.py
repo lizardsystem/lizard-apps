@@ -7,6 +7,7 @@ from __future__ import print_function
 from __future__ import unicode_literals
 
 from django.db import models
+from lizard_apps import managers
 
 
 class Application(models.Model):
@@ -16,8 +17,8 @@ class Application(models.Model):
     that will be used to switch between our and third-party websites.
 
     Icon will be uploaded to MEDIA_ROOT/lizard_apps.
-
     """
+
     url = models.URLField()
     icon = models.ImageField(upload_to='lizard_apps/')
     name = models.CharField(
@@ -26,17 +27,22 @@ class Application(models.Model):
         max_length=64,
     )
 
+    objects = managers.ApplicationManager()
+
     class Meta:
         ordering = ['name']
+        unique_together = ('url', 'icon', 'name')
 
     def __unicode__(self):
         return self.name
 
+    def natural_key(self):
+        return (self.url, self.icon.name, self.name)
+
 
 class Screen(models.Model):
-    """A collection of applications.
+    """A collection of applications."""
 
-    """
     slug = models.SlugField(max_length=64, unique=True)
     applications = models.ManyToManyField(
         Application,
@@ -44,22 +50,29 @@ class Screen(models.Model):
         through='ApplicationScreen'
     )
 
+    objects = managers.ScreenManager()
+
     class Meta:
         ordering = ['slug']
 
     def __unicode__(self):
         return self.slug
 
+    def natural_key(self):
+        return (self.slug,)
+
 
 class ApplicationScreen(models.Model):
     """Intermediary model for ordering applications on a screen.
 
     If no order if provided, ordering will be alphabetically.
-
     """
+
     screen = models.ForeignKey(Screen)
     application = models.ForeignKey(Application)
     order = models.IntegerField(blank=True, null=True)
+
+    objects = managers.ApplicationScreenManager()
 
     class Meta:
         ordering = ['screen', 'order', 'application__name']
@@ -67,3 +80,6 @@ class ApplicationScreen(models.Model):
 
     def __unicode__(self):
         return self.application.url
+
+    def natural_key(self):
+        return (self.screen, self.application)
