@@ -4,7 +4,7 @@ Changelog of lizard-apps
 0.2.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Changed __unicode__ of models into __str__.
 
 
 0.2.4 (2020-01-24)
