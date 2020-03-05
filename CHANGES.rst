@@ -8,6 +8,8 @@ Changelog of lizard-apps
 
 - Fixed ordering in template view.
 
+- Fixed performance of template view (fetch everything in a single query).
+
 
 0.2.4 (2020-01-24)
 ------------------
