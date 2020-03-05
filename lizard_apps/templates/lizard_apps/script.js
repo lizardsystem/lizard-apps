@@ -28,11 +28,11 @@
     appsContainer.innerHTML = '' +
 
     '<div class="lizard-apps">' +
-      {% for app in view.screen.applications.all %}
+      {% for as in view.screen.applicationscreen_set.all %}
         '<div class="lizard-apps-icon">' +
-          '<a href="{{ app.url }}" target="_blank" title="{{ app.name }}">' +
-            '<img src="//{{ request.get_host }}{{ MEDIA_URL }}{{ app.icon }}" />' +
-            '<span class="lizard-app-title">{{ app.name }}</span>' +
+          '<a href="{{ as.application.url }}" target="_blank" title="{{ as.application.name }}">' +
+            '<img src="//{{ request.get_host }}{{ MEDIA_URL }}{{ as.application.icon }}" />' +
+            '<span class="lizard-app-title">{{ as.application.name }}</span>' +
           '</a>' +
         '</div>' +
       {% endfor %}

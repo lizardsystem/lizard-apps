@@ -6,6 +6,8 @@ Changelog of lizard-apps
 
 - Changed __unicode__ of models into __str__.
 
+- Fixed ordering in template view.
+
 
 0.2.4 (2020-01-24)
 ------------------
