@@ -4,7 +4,9 @@ Changelog of lizard-apps
 0.2.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Squashed migrations.
+
+- Added code compatibility for Django 2.2.
 
 
 0.2.4 (2020-01-24)
