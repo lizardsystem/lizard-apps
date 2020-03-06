@@ -68,8 +68,8 @@ class ApplicationScreen(models.Model):
     If no order if provided, ordering will be alphabetically.
     """
 
-    screen = models.ForeignKey(Screen)
-    application = models.ForeignKey(Application)
+    screen = models.ForeignKey(Screen, on_delete=models.CASCADE)
+    application = models.ForeignKey(Application, on_delete=models.CASCADE)
     order = models.IntegerField(blank=True, null=True)
 
     objects = managers.ApplicationScreenManager()
