@@ -30,7 +30,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('order', models.IntegerField(blank=True, null=True)),
-                ('application', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='myapp.Application')),
+                ('application', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='lizard_apps.Application')),
             ],
             options={
                 'ordering': ['screen', 'order', 'application__name'],
@@ -41,7 +41,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('slug', models.SlugField(max_length=64, unique=True)),
-                ('applications', models.ManyToManyField(related_name='screens', through='myapp.ApplicationScreen', to='myapp.Application')),
+                ('applications', models.ManyToManyField(related_name='screens', through='lizard_apps.ApplicationScreen', to='lizard_apps.Application')),
             ],
             options={
                 'ordering': ['slug'],
@@ -50,7 +50,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='applicationscreen',
             name='screen',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='myapp.Screen'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='lizard_apps.Screen'),
         ),
         migrations.AlterUniqueTogether(
             name='applicationscreen',
