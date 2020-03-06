@@ -13,7 +13,7 @@ install_requires = [
 
 setup(
     name='lizard-apps',
-    version='0.2.5',
+    version='0.2.6.dev0',
     packages=['lizard_apps'],
     include_package_data=True,
     license='MIT License',
