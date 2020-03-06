@@ -1,7 +1,7 @@
 Changelog of lizard-apps
 ========================
 
-0.2.6 (unreleased)
+0.2.6 (2020-03-06)
 ------------------
 
 - Fixed code compatibility with Django 2.2.
