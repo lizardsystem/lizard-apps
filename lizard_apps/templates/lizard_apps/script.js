@@ -28,7 +28,7 @@
     appsContainer.innerHTML = '' +
 
     '<div class="lizard-apps">' +
-      {% for app in view.screen.applications.all %}
+      {% for app in view.apps %}
         '<div class="lizard-apps-icon">' +
           '<a href="{{ app.url }}" target="_blank" title="{{ app.name }}">' +
             '<img src="//{{ request.get_host }}{{ MEDIA_URL }}{{ app.icon }}" />' +

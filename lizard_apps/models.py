@@ -33,7 +33,7 @@ class Application(models.Model):
         ordering = ['name']
         unique_together = ('url', 'icon', 'name')
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
     def natural_key(self):
@@ -55,7 +55,7 @@ class Screen(models.Model):
     class Meta:
         ordering = ['slug']
 
-    def __unicode__(self):
+    def __str__(self):
         return self.slug
 
     def natural_key(self):
@@ -78,7 +78,7 @@ class ApplicationScreen(models.Model):
         ordering = ['screen', 'order', 'application__name']
         unique_together = ('screen', 'application')
 
-    def __unicode__(self):
+    def __str__(self):
         return self.application.url
 
     def natural_key(self):

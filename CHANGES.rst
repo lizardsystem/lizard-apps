@@ -4,7 +4,11 @@ Changelog of lizard-apps
 0.2.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Changed __unicode__ of models into __str__.
+
+- Fixed ordering in template view.
+
+- Fixed performance of template view (fetch everything in a single query).
 
 
 0.2.4 (2020-01-24)
