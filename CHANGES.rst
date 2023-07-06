@@ -1,7 +1,7 @@
 Changelog of lizard-apps
 ========================
 
-0.2.7 (unreleased)
+0.2.7 (2023-07-06)
 ------------------
 
 - Added a JSON version of the view.
