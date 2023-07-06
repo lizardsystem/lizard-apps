@@ -1,6 +1,12 @@
 Changelog of lizard-apps
 ========================
 
+0.2.9 (unreleased)
+------------------
+
+- Nothing changed yet.
+
+
 0.2.8 (2023-07-06)
 ------------------
 
