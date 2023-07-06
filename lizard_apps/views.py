@@ -24,7 +24,7 @@ class AppScreenView(TemplateView):
     template_name = "lizard_apps/script.js"
 
     def apps(self):
-        return get_list_or_404(self.kwargs["slug"])
+        return get_apps_or_404(self.kwargs["slug"])
 
 
 def app_screen_view(request, slug):
