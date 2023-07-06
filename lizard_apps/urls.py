@@ -11,5 +11,6 @@ from django.conf.urls import url
 from lizard_apps import views
 
 urlpatterns = [
-    url(r'^screens/(?P<slug>[\w-]+)\.js', views.AppScreenView.as_view()),
+    url(r"^screens/(?P<slug>[\w-]+)\.json$", views.app_screen_view),
+    url(r"^screens/(?P<slug>[\w-]+)\.js$", views.AppScreenView.as_view()),
 ]
