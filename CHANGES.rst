@@ -1,7 +1,7 @@
 Changelog of lizard-apps
 ========================
 
-0.2.8 (unreleased)
+0.2.8 (2023-07-06)
 ------------------
 
 - Fix bug in JS version of the view.
