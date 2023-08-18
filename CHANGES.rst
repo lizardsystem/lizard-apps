@@ -4,7 +4,8 @@ Changelog of lizard-apps
 0.2.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix RemovedInDjango40Warning: django.conf.urls.url() is deprecated in favor
+  of django.urls.re_path()
 
 
 0.2.8 (2023-07-06)
