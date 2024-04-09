@@ -4,8 +4,10 @@ Changelog of lizard-apps
 0.2.10 (unreleased)
 -------------------
 
-- Fix RemovedInDjango40Warning: django.conf.urls.url() is deprecated in favor
+- Fixed RemovedInDjango40Warning: django.conf.urls.url() is deprecated in favor
   of django.urls.re_path()
+
+- Fixed image preview in Django Admin.
 
 
 0.2.9 (2023-08-18)
